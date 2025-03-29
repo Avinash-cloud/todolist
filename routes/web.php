@@ -14,9 +14,9 @@ use App\Http\Controllers\TaskController;
 |
 */
 
+Route::delete('/tasks/clear-completed', [TaskController::class, 'deleteCompleted']);
 Route::get('/', [TaskController::class, 'index']);
 Route::post('/tasks', [TaskController::class, 'store']);
 Route::delete('/tasks/{id}', [TaskController::class, 'destroy']);
 Route::get('/tasks/show', [TaskController::class, 'showAll']);
 Route::post('/tasks/complete/{id}', [TaskController::class, 'complete']);
-Route::delete('/tasks/clear-completed', [TaskController::class, 'deleteCompleted']);
